@@ -7,8 +7,8 @@ This module demonstrates:
  5. Two equality operators:   is   ==
 
 Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Jixi Wang.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import rosegraphics as rg
 
@@ -18,7 +18,7 @@ import rosegraphics as rg
 ########################################################################
 
 # ----------------------------------------------------------------------
-# TODO: 2.
+# DONE: 2.
 #  Step a:  READ the   mutate_point   function below.
 #
 #  Step b:  Note that the code in main has 5 parts numbered 1, 2, ... 5.
@@ -103,7 +103,7 @@ def main():
     print(point, point2)  # Prints the two DIFFERENT rg.Points
 
     # ------------------------------------------------------------------
-    # 5. Shows the difference betwee the   is   operator
+    # 5. Shows the difference between the   is   operator
     #      (two things refer to the same place in memory)
     #    and the   ==   operator (two things contain the same data).
     # ------------------------------------------------------------------
@@ -171,6 +171,12 @@ def main():
     print()
     print('T or F: (2 * "hello") is (2 * "hello"?', x is y)
     print('T or F: (2 * "hello") == (2 * "hello"?', x == y)
+
+    x = 3 * x
+    y = 3 * y
+    print()
+    print('T or F: (3 * "hello") is (3 * "hello"?', x is y)
+    print('T or F: (3 * "hello") == (3 * "hello"?', x == y)
 
 
 # ----------------------------------------------------------------------

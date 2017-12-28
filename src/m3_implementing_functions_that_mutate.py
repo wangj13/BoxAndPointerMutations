@@ -3,8 +3,8 @@ This module lets you practice IMPLEMENTING
 functions that MUTATE their arguments.
 
 Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Jixi Wang.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import rosegraphics as rg
 
@@ -51,6 +51,7 @@ def run_test_swap_colors():
 
     swap_colors(circle, rectangle)
 
+
     print()
     print('Expected circle after the function call:')
     print(expected_c)
@@ -62,6 +63,7 @@ def run_test_swap_colors():
     print(expected_r)
     print('Actual rectangle after the function call:')
     print(rectangle)
+
 
     # ------------------------------------------------------------------
     # Test 2:  This is a VISUAL test.
@@ -84,9 +86,17 @@ def run_test_swap_colors():
     circle.fill_color = 'black'
     circle.attach_to(window)
 
+    circle2 = rg.Circle(rg.Point(500, 600), 100)
+    circle2.fill_color = 'yellow'
+    circle2.attach_to(window)
+
     rectangle = rg.Rectangle(rg.Point(200, 280), rg.Point(350, 350))
     rectangle.fill_color = 'red'
     rectangle.attach_to(window)
+
+    rectangle2 = rg.Rectangle(rg.Point(100, 200), rg.Point(200, 300))
+    rectangle2.fill_color = 'blue'
+    rectangle2.attach_to(window)
 
     msg1 = 'At this point, the circle should be filled with BLACK\n'
     msg1 += 'and the rectangle should be filled with RED'
@@ -99,6 +109,7 @@ def run_test_swap_colors():
     window.continue_on_mouse_click()
 
     swap_colors(circle, rectangle)
+    swap_colors2(circle2, rectangle2)
 
     # At this point, the CIRCLE should be filled with RED
     #                   and the RECTANGLE filled with BLACK.
@@ -113,6 +124,17 @@ def run_test_swap_colors():
 
 
 def swap_colors(circle, rectangle):
+    xin = circle.fill_color
+    circle.fill_color = rectangle.fill_color
+    rectangle.fill_color = xin
+
+def swap_colors2(circle2, rectangle2):
+    jixi = circle2.fill_color
+    circle2.fill_color = rectangle2.fill_color
+    rectangle2.fill_color = jixi
+
+
+
     """
     What comes in:
       -- An rg.Circle.
@@ -133,8 +155,12 @@ def swap_colors(circle, rectangle):
       :type circle: rg.Circle
       :type rectangle: rg.Rectangle
     """
+# def swap_colors(circle, rectangle):
+    #jixi = circle.fill_color
+    #circle.fill_color = rectangle.fill_color
+    #rectangle.fill_color = jixi
     # ------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # DONE: 2. Implement and test this function.
     #          Tests have been written for you (above).
     #
     ####################################################################
